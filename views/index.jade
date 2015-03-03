@@ -1,0 +1,24 @@
+doctype html
+html(lang='en',ng-app='polls')
+  head
+   meta(charset='utf-8')
+   meta(name='viewport' content='width=device-width,initial-scale=1,user-scalable=no')
+   title= polling
+   link(rel='stylesheet', href='/stylesheets/style.css')
+   link(rel='stylesheet', href='/stylesheets/custom_style.css')
+   script(src='/vendor/angular.js')
+   script(src='/vendor/angular-route.js')
+   script(src='/vendor/angular-resource.js')
+   script(src='/javascripts/app.js')
+   script(src='/controllers/pollListCtrl.js')
+   script(src='/controllers/pollNewCtrl.js')
+   script(src='/controllers/polItemCtrl.js')
+   script(src='/services/pollServices.js')
+   script(src='/socket.io/socket.io.js')
+  body(ng-controller='pollListCtrl')
+   nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    div.navbar-header
+     a.navbar-brand(href='#/polls')=title
+   div.container
+    div(ng-view)
+   
